@@ -213,6 +213,16 @@
     [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
 
 }
+- (IBAction)locateStore:(id)sender {
+    ShopAddressViewController *detailViewController = [[ShopAddressViewController alloc] init];
+    // NSLog(@"%@",_shopInfo);
+    detailViewController.shopId = [self.shopInfo valueForKey:@"shop_id"];
+    AppDelegate *mydelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
+    // [detailViewController release];
+    
+}
+
 -(void) dealloc{
     [productAllArray release];
     [shopInfo release];

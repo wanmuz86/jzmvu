@@ -151,7 +151,7 @@
    
     
        cell.productLabel1.text =[[[[_productArray objectAtIndex:indexPath.section] valueForKey:@"product_list"] objectAtIndex:0] valueForKey:@"product_category"];
-    
+        cell.transView1.hidden = NO;
     cell.priceLabel1.text =[[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:0] valueForKey:@"product_price"];
     cell.button1.tag =  3*indexPath.section+0;
     if( [[[[[_productArray objectAtIndex:indexPath.section]
@@ -165,7 +165,7 @@
     cell.rateView1.selectedImage = [UIImage imageNamed:@"star.png"];
     cell.rateView1.nonSelectedImage = [UIImage imageNamed:@"grey_star.png"];
     cell.rateView1.maxRating = 5;
-    cell.transView1.hidden = FALSE;
+
     }
     [cell.button1 setBackgroundImageWithURL:[[[[_productArray objectAtIndex:indexPath.section] valueForKey:@"product_list"] objectAtIndex:0] valueForKey:@"product_image"] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_icon"]];
     [cell.button1 addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -175,6 +175,7 @@
     cell.catLabel2.text = [[[[_productArray objectAtIndex:indexPath.section] valueForKey:@"product_list"] objectAtIndex:1] valueForKey:@"product_name"];
     cell.productLabel2.text =[[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:1] valueForKey:@"product_category"];
     cell.priceLabel2.text =[[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:1] valueForKey:@"product_price"];
+        cell.transView2.hidden = NO;
         if( [[[[[_productArray objectAtIndex:indexPath.section]
                valueForKey:@"product_list"] objectAtIndex:1] valueForKey:@"product_rating"] isEqual:@"0.0"]){
             cell.rateView2.hidden = TRUE;
@@ -186,7 +187,7 @@
         cell.rateView2.selectedImage = [UIImage imageNamed:@"star.png"];
         cell.rateView2.nonSelectedImage = [UIImage imageNamed:@"grey_star.png"];
         cell.rateView2.maxRating = 5;
-        cell.transView2.hidden = FALSE;
+        
         }
         cell.button2.tag = 3*indexPath.section+1;
            [cell.button2 setBackgroundImageWithURL:[[[[_productArray objectAtIndex:indexPath.section] valueForKey:@"product_list"] objectAtIndex:1] valueForKey:@"product_image"] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_icon"]];
@@ -198,9 +199,10 @@
     cell.catLabel3.text = [[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:2] valueForKey:@"product_name"];
     cell.productLabel3.text =[[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:2] valueForKey:@"product_category"];
      cell.priceLabel3.text =[[[[_productArray objectAtIndex:indexPath.section]valueForKey:@"product_list"] objectAtIndex:2] valueForKey:@"product_price"];
+          cell.transView3.hidden = NO;
         if( [[[[[_productArray objectAtIndex:indexPath.section]
                 valueForKey:@"product_list"] objectAtIndex:2] valueForKey:@"product_rating"] isEqual:@"0.0"]){
-            cell.rateView3.hidden = TRUE;
+            cell.rateView3.hidden = YES;
         }
         else{
         cell.rateView3.rating = [[[[[_productArray objectAtIndex:indexPath.section]
@@ -209,7 +211,7 @@
         cell.rateView3.selectedImage = [UIImage imageNamed:@"star.png"];
         cell.rateView3.nonSelectedImage = [UIImage imageNamed:@"grey_star.png"];
         cell.rateView3.maxRating = 5;
-        cell.transView3.hidden = FALSE;
+      
         }
         cell.button3.tag = 3*indexPath.section+2;
            [cell.button3 setBackgroundImageWithURL:[[[[_productArray objectAtIndex:indexPath.section] valueForKey:@"product_list"] objectAtIndex:2] valueForKey:@"product_image"] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_icon"]];
@@ -221,11 +223,18 @@
 
 -(void)viewAll:(id)sender{
     ProductViewAllViewController *detailViewController = [[ProductViewAllViewController alloc] initWith:_shopInfo andCat:[[_productArray objectAtIndex:[sender tag] ]valueForKey:@"category_name"]];
-                                                         
-    detailViewController.productAllArray =[[MJModel sharedInstance] getFullListOfProductsFor:[_shopInfo valueForKey:@"shop_id"] inCat:[[_productArray objectAtIndex:[sender tag]] valueForKey:@"category_id"] andPage:@"1"];
-
-    AppDelegate *mydelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
+           
+    
+    NSDictionary *tempDict = [NSDictionary dictionaryWithDictionary:[[MJModel sharedInstance] getFullListOfProductsFor:[_shopInfo valueForKey:@"shop_id"] inCat:[[_productArray objectAtIndex:[sender tag]] valueForKey:@"category_id"] andPage:@"1" ]];
+    if ([[tempDict valueForKey:@"status"] isEqualToString:@"ok"]){
+        AppDelegate *mydelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        
+        detailViewController.productAllArray = [[[tempDict objectForKey:@"list"] objectAtIndex:0] objectForKey:@"product_list"];
+        [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc] init];
+    }
+    
    // [detailViewController release];
 }
 -(void)tapAction:(id)sender{

@@ -187,7 +187,7 @@ static MJModel *_sharedInstance = nil;
     return catList;
 }
 
--(NSMutableArray*) getFullListOfShopsFor:(NSString*)catId andPage:(NSString*)pageNum{
+-(NSDictionary*) getFullListOfShopsFor:(NSString*)catId andPage:(NSString*)pageNum{
     NSMutableArray *catList = [NSMutableArray array];
     NSString* request = [NSString stringWithFormat:@"/api/shop_list.php"];
     NSString *options =[NSString stringWithFormat:@"{\"category_id\":%@,\"page\":\"%@\"}",catId,pageNum];
@@ -198,29 +198,17 @@ static MJModel *_sharedInstance = nil;
     {
         NSString *status = [answer objectForKey:@"status"];
         
-        if ([status isEqualToString:@"ok"])
-        { NSLog(@"%@",answer);
-            cat = [[[answer objectForKey:@"list"] objectAtIndex:0]objectForKey:@"shop_list"] ;
-            
-            for (id row in cat)
-            {
-                [catList addObject:row];
-                NSLog(@"%@",row);
-            }
-            NSLog(@"%@",catList);
-        }
+                    return answer;
+        
     }
 
-    return catList;
     
 }
--(NSMutableArray*) getFullListOfProductsFor:(NSString*)shopId inCat:(NSString*)catId andPage:(NSString*)pageNum{
+-(NSDictionary*) getFullListOfProductsFor:(NSString*)shopId inCat:(NSString*)catId andPage:(NSString*)pageNum{
     NSMutableArray *productList = [NSMutableArray array];
     NSString* request = [NSString stringWithFormat:@"/api/shop_product_list.php"];
     NSString *options =[NSString stringWithFormat:@"{\"shop_id\":%@,\"search_sort\":\"A-Z\",\"category_id\":%@,\"page\":\"%@\"}",shopId,catId,pageNum];
  
-
-    NSLog(@"%@",options);
     NSDictionary *answer =  [self getResponseDict:request withOptions:options];
     NSDictionary *cat;
     if([answer count])
@@ -239,7 +227,7 @@ static MJModel *_sharedInstance = nil;
             NSLog(@"%@",productList);
         }
     }
-    return productList;
+    return answer;
     
 }
 -(NSDictionary*) getProductInfoFor:(NSString*)prodId{

@@ -33,7 +33,7 @@
 //    
 //    self.tableView.backgroundView = tempImageView;
 //    [tempImageView release];
-    [self.activityIndicator startAnimating];
+ //   [self.activityIndicator startAnimating];
     [self refresh];
     //    [self performSelectorOnMainThread:@selector(setupView) withObject:nil waitUntilDone:YES];
 //    [self performSelectorInBackground:@selector(loadData) withObject:nil];
@@ -47,7 +47,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"vda shoplist");
-    [self.activityIndicator startAnimating];
+   // [self.activityIndicator startAnimating];
     //    [self performSelectorOnMainThread:@selector(setupView) withObject:nil waitUntilDone:YES];
 //    [self performSelectorInBackground:@selector(loadData) withObject:nil];
     [self refresh];
@@ -85,20 +85,20 @@
 //    [tempImageView release];
 //}
 
-- (void) addItemsToEndOfTableView{
-    //    [super addItemsToEndOfTableView];
-    [UIView animateWithDuration:0.3 animations:^{
-      
-
-                CGRect screenBounds = [[UIScreen mainScreen] bounds];
-                if (screenBounds.size.height != 568) {
-                    // code for 4-inch screen
-                    [self.tableView setContentOffset:CGPointMake(0, 0)];
-            
-        
-    
-                }}];
-}
+//- (void) addItemsToEndOfTableView{
+//    //    [super addItemsToEndOfTableView];
+//    [UIView animateWithDuration:0.3 animations:^{
+//      
+//
+//                CGRect screenBounds = [[UIScreen mainScreen] bounds];
+//                if (screenBounds.size.height != 568) {
+//                    // code for 4-inch screen
+//                    [self.tableView setContentOffset:CGPointMake(0, 0)];
+//            
+//        
+//    
+//                }}];
+//}
 
 - (void)refresh {
     [self performSelector:@selector(addItem) withObject:nil afterDelay:0.0];
@@ -114,7 +114,7 @@
     self.catArray = [[MJModel sharedInstance] getCategoryAndTopShop];
     [self.tableView reloadData];
     
-    [self stopLoading];
+   // [self stopLoading];
 }
 
 
@@ -233,12 +233,20 @@
 
 -(void)viewAll:(id)sender{
     ShopViewAllViewController *detailViewController = [[ShopViewAllViewController alloc] init];
-    detailViewController.catAllArray = [[NSMutableArray alloc] initWithArray:[[MJModel sharedInstance] getFullListOfShopsFor:[[_catArray objectAtIndex:[sender tag] ]valueForKey:@"category_id"] andPage:@"1"]];
+    NSDictionary *tempDict = [NSDictionary dictionaryWithDictionary:[[MJModel sharedInstance] getFullListOfShopsFor:[[_catArray objectAtIndex:[sender tag] ]valueForKey:@"category_id"] andPage:@"1"]];
+    if ([[tempDict valueForKey:@"status"] isEqualToString:@"ok"]){
+        detailViewController.catAllArray = [[NSMutableArray alloc] initWithArray:[tempDict valueForKey:@"list"]];
+        NSLog(@"%@",tempDict);
+   //     detailViewController.pageCounter = [[tempDict valueForKey:@"list" ]valueForKey:@"pagecount"];
+        AppDelegate *mydelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
+        
+    }
+        [ detailViewController release];
+    }
+   
     
-    AppDelegate *mydelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [mydelegate.shopNavController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-}
+ 
 -(void)tapAction:(id)sender{
 
     ShopDetailListingViewController *detailViewController = [[ShopDetailListingViewController alloc] init];
@@ -273,9 +281,9 @@
 }
 
 - (void)viewDidUnload {
-    self.activityIndicator=nil;
-    self.activityIndicatorView=nil;
-    self.footerActivityIndicator=nil;
+//    self.activityIndicator=nil;
+  //  self.activityIndicatorView=nil;
+    //self.footerActivityIndicator=nil;
     self.tableView=nil;
 
     [super viewDidUnload];

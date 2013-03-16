@@ -35,11 +35,7 @@
 //    
 //    self.totalPage = [self.purchasedHistory valueForKey:@"pagecount"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshTable:) name:@"refreshPurchaseHistory" object:nil];
-   /* UIView *tempImageView = [[UIView alloc] init];
-    [tempImageView setBackgroundColor:[UIColor colorWithRed:232/255 green:232/255 blue:232/255 alpha:1.0]];
-    [tempImageView setFrame:self.tableView.frame];
-    self.tableView.backgroundView = tempImageView;
-    [tempImageView release];*/
+
 
 
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -109,9 +105,13 @@
     self.selectedStatus = @"";
     
     self.purchasedHistory = [[NSDictionary alloc] initWithDictionary:[[MJModel sharedInstance] getPurchasedHistoryItems]];
+    if ([[purchasedHistory valueForKey:@"list"] count] >0){
+        
+    
     self.purchasedHistoryArray = [[NSMutableArray alloc] initWithArray:[self groupByOrderId:[self.purchasedHistory valueForKey:@"list"]]];
     self.tempPurchasedArray = [[NSMutableArray alloc] initWithArray:[self.purchasedHistory valueForKey:@"list"]];
-    
+}
+
     self.totalPage = [self.purchasedHistory valueForKey:@"pagecount"];
     
     NSString *isLogin = [[[NSUserDefaults standardUserDefaults] objectForKey:@"islogin"]copy];
@@ -271,6 +271,7 @@ if ([status isEqualToString:@"error"]) {
 {
 
     // Return the number of sections.
+
     return [[self purchasedHistoryArray] count];
 }
 

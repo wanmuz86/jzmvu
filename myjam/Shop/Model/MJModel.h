@@ -14,9 +14,9 @@
 + (MJModel*) sharedInstance;
 -(NSMutableArray*) getCategoryAndTopShop;
 -(NSMutableArray*) getCategoryAndTopShopFor:(NSString*)searchText cats:(NSString*)catIds arrangedBy:(NSString*)arrange;
--(NSMutableArray*) getFullListOfShopsFor:(NSString*)shopId andPage:(NSString*)pageNum;
+-(NSDictionary*) getFullListOfShopsFor:(NSString*)shopId andPage:(NSString*)pageNum;
 -(NSMutableArray*) getTopListOfItemsFor:(NSString*)shopId;
--(NSMutableArray*) getFullListOfProductsFor:(NSString*)shopId inCat:(NSString*)catId andPage:(NSString*)pageNum;
+-(NSDictionary*) getFullListOfProductsFor:(NSString*)shopId inCat:(NSString*)catId andPage:(NSString*)pageNum;
 -(NSDictionary*) getProductInfoFor:(NSString*)prodId;
 -(NSMutableArray*) getProductReviewFor:(NSString*)prodId inPage:(NSString*)pageNum;
 -(NSDictionary*) getReviewInfoFor:(NSString*)prodId;

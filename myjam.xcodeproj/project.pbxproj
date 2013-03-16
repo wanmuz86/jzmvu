@@ -254,7 +254,6 @@
 		613963E316EF8EFF0056B314 /* DeliveryOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6139637016EF8EFF0056B314 /* DeliveryOptionViewController.xib */; };
 		613963E416EF8EFF0056B314 /* DetailProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6139637216EF8EFF0056B314 /* DetailProductViewController.m */; };
 		613963E516EF8EFF0056B314 /* DetailProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6139637316EF8EFF0056B314 /* DetailProductViewController.xib */; };
-		613963E616EF8EFF0056B314 /* JAM-BU Beta v1.0.ipa in Resources */ = {isa = PBXBuildFile; fileRef = 6139637616EF8EFF0056B314 /* JAM-BU Beta v1.0.ipa */; };
 		613963E716EF8EFF0056B314 /* MJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6139637916EF8EFF0056B314 /* MJModel.m */; };
 		613963E816EF8EFF0056B314 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6139637B16EF8EFF0056B314 /* Shop.m */; };
 		613963E916EF8EFF0056B314 /* NSDictionary+JSONCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6139637D16EF8EFF0056B314 /* NSDictionary+JSONCategories.m */; };
@@ -458,6 +457,8 @@
 		FF19ACA316E73028002F36A1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19ACA216E73028002F36A1 /* Social.framework */; };
 		FF2425F216E71D4F00A11682 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2425F116E71D4F00A11682 /* FacebookSDK.framework */; };
 		FF622EA916E861C100CEAD00 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FF622EA816E861C100CEAD00 /* CustomBadge.m */; };
+		FFC0FC9716F40B6C002EF512 /* CustomTableHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC0FC9616F40B6C002EF512 /* CustomTableHeaderCell.m */; };
+		FFC0FC9916F40BD1002EF512 /* CustomTableHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC0FC9816F40BD1002EF512 /* CustomTableHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -777,7 +778,6 @@
 		6139637116EF8EFF0056B314 /* DetailProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProductViewController.h; sourceTree = "<group>"; };
 		6139637216EF8EFF0056B314 /* DetailProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProductViewController.m; sourceTree = "<group>"; };
 		6139637316EF8EFF0056B314 /* DetailProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailProductViewController.xib; sourceTree = "<group>"; };
-		6139637616EF8EFF0056B314 /* JAM-BU Beta v1.0.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JAM-BU Beta v1.0.ipa"; sourceTree = "<group>"; };
 		6139637816EF8EFF0056B314 /* MJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJModel.h; sourceTree = "<group>"; };
 		6139637916EF8EFF0056B314 /* MJModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJModel.m; sourceTree = "<group>"; };
 		6139637A16EF8EFF0056B314 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
@@ -1100,6 +1100,9 @@
 		FF2425F116E71D4F00A11682 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = myjam/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		FF622EA716E861C100CEAD00 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
 		FF622EA816E861C100CEAD00 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		FFC0FC9516F40B6B002EF512 /* CustomTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableHeaderCell.h; path = CustomCell/CustomTableHeaderCell.h; sourceTree = "<group>"; };
+		FFC0FC9616F40B6C002EF512 /* CustomTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableHeaderCell.m; path = CustomCell/CustomTableHeaderCell.m; sourceTree = "<group>"; };
+		FFC0FC9816F40BD1002EF512 /* CustomTableHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1427,6 +1430,9 @@
 				6139636516EF8EFF0056B314 /* CustomTableHeader.h */,
 				6139636616EF8EFF0056B314 /* CustomTableHeader.m */,
 				6139636716EF8EFF0056B314 /* CustomTableHeader.xib */,
+				FFC0FC9516F40B6B002EF512 /* CustomTableHeaderCell.h */,
+				FFC0FC9816F40BD1002EF512 /* CustomTableHeaderCell.xib */,
+				FFC0FC9616F40B6C002EF512 /* CustomTableHeaderCell.m */,
 				6139636816EF8EFF0056B314 /* DeliveryChoiceViewController.h */,
 				6139636916EF8EFF0056B314 /* DeliveryChoiceViewController.m */,
 				6139636A16EF8EFF0056B314 /* DeliveryChoiceViewController.xib */,
@@ -1440,7 +1446,6 @@
 				6139637216EF8EFF0056B314 /* DetailProductViewController.m */,
 				6139637316EF8EFF0056B314 /* DetailProductViewController.xib */,
 				6139637416EF8EFF0056B314 /* Images */,
-				6139637616EF8EFF0056B314 /* JAM-BU Beta v1.0.ipa */,
 				6139637716EF8EFF0056B314 /* Model */,
 				6139637C16EF8EFF0056B314 /* NSDictionary+JSONCategories.h */,
 				6139637D16EF8EFF0056B314 /* NSDictionary+JSONCategories.m */,
@@ -2535,7 +2540,6 @@
 				613963E116EF8EFF0056B314 /* DeliveryDayChoiceViewController.xib in Resources */,
 				613963E316EF8EFF0056B314 /* DeliveryOptionViewController.xib in Resources */,
 				613963E516EF8EFF0056B314 /* DetailProductViewController.xib in Resources */,
-				613963E616EF8EFF0056B314 /* JAM-BU Beta v1.0.ipa in Resources */,
 				613963EC16EF8EFF0056B314 /* ProductHeaderView.xib in Resources */,
 				613963EE16EF8EFF0056B314 /* ProductRatingListViewController.xib in Resources */,
 				613963F016EF8EFF0056B314 /* ProductReportViewController.xib in Resources */,
@@ -2552,6 +2556,7 @@
 				6139640B16EF8EFF0056B314 /* WriteReviewViewController.xib in Resources */,
 				61B4873316F020C200DB433B /* button_minus_dark.png in Resources */,
 				61B4873416F020C200DB433B /* button_plus_dark.png in Resources */,
+				FFC0FC9916F40BD1002EF512 /* CustomTableHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2727,6 +2732,7 @@
 				6139640816EF8EFF0056B314 /* UIColor+HexString.m in Sources */,
 				6139640916EF8EFF0056B314 /* UIImageView+RemoteFile.m in Sources */,
 				6139640A16EF8EFF0056B314 /* WriteReviewViewController.m in Sources */,
+				FFC0FC9716F40B6C002EF512 /* CustomTableHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2760,8 +2766,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ME-Tech Solution Sdn Bhd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ME-Tech Solution Sdn Bhd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2776,8 +2782,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "160EEA6E-4BE5-4475-A08E-32AB14C4CAAB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "160EEA6E-4BE5-4475-A08E-32AB14C4CAAB";
+				PROVISIONING_PROFILE = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2790,8 +2796,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ME-Tech Solution Sdn Bhd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ME-Tech Solution Sdn Bhd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2799,8 +2805,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "160EEA6E-4BE5-4475-A08E-32AB14C4CAAB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "160EEA6E-4BE5-4475-A08E-32AB14C4CAAB";
+				PROVISIONING_PROFILE = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2811,8 +2817,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../FacebookSDK\"",
@@ -2838,8 +2844,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "JAM-BU Beta v1.0";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2849,8 +2855,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nazri Hussein (X2BJKVNYHB)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../FacebookSDK\"",
@@ -2875,8 +2881,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "JAM-BU Beta v1.0";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "512ACEFD-19F9-4FEC-A020-F847E65D5693";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

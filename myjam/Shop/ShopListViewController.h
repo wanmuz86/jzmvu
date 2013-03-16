@@ -19,7 +19,7 @@
 #import <SDWebImage/UIButton+WebCache.h>
 
 
-@interface ShopListViewController : PullRefreshTableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ShopListViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *catArray;
 

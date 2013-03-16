@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomTableHeader.h"
+#import "CustomTableHeaderCell.h"
 #import "ShopTableViewCellwoCat.h"
 #import "ShopDetailListingViewController.h"
 #import "PullRefreshTableViewController.h"
 #import <SDWebImage/UIButton+WebCache.h>
-@interface ShopViewAllViewController : UITableViewController
+@interface ShopViewAllViewController : UITableViewController{
+    int kDisplayPerscreen;
+}
 @property (strong, nonatomic) NSMutableArray *catAllArray;
+- (IBAction)locateStore:(id)sender;
 @end
