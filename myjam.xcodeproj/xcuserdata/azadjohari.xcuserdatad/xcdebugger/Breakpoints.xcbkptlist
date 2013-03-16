@@ -273,7 +273,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "334"
          endingLineNumber = "334"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -286,7 +286,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "337"
          endingLineNumber = "337"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -346,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/ShopAddressViewController.m"
-         timestampString = "384269319.102761"
+         timestampString = "385111757.50877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
          landmarkName = "-visitShop:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -359,11 +359,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/ShopAddressViewController.m"
-         timestampString = "384269362.470637"
+         timestampString = "385111757.50877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-visitShop:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -372,11 +372,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/ShopAddressViewController.m"
-         timestampString = "384269501.429673"
+         timestampString = "385111757.50877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
          landmarkName = "-visitShop:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -546,7 +546,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "537"
          endingLineNumber = "537"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -585,7 +585,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "551"
          endingLineNumber = "551"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -611,7 +611,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "557"
          endingLineNumber = "557"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -676,7 +676,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "558"
          endingLineNumber = "558"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -767,7 +767,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "541"
          endingLineNumber = "541"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -780,7 +780,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "545"
          endingLineNumber = "545"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -793,7 +793,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "538"
          endingLineNumber = "538"
-         landmarkName = "-checkOut:"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -944,11 +944,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/CoreViewController.m"
-         timestampString = "384356690.06554"
+         timestampString = "385112267.629752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-shareImageOnEmailWithId:withImage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -957,11 +957,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/CoreViewController.m"
-         timestampString = "384357325.379692"
+         timestampString = "385112267.629752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-addShareItemtoServer:withShareType:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -970,11 +970,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "myjam/Shop/CoreViewController.m"
-         timestampString = "384357334.274827"
+         timestampString = "385112267.629752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-addShareItemtoServer:withShareType:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -988,8 +988,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "211"
          endingLineNumber = "211"
-         landmarkName = "-facebookPressed:"
-         landmarkType = "5">
+         landmarkName = "@implementation DetailProductViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1001,8 +1001,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "215"
          endingLineNumber = "215"
-         landmarkName = "-twitterPressed:"
-         landmarkType = "5">
+         landmarkName = "@implementation DetailProductViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1014,8 +1014,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "219"
          endingLineNumber = "219"
-         landmarkName = "-emailPressed:"
-         landmarkType = "5">
+         landmarkName = "@implementation DetailProductViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -2003,6 +2003,45 @@
          startingLineNumber = "211"
          endingLineNumber = "211"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "myjam/Shop/CoreViewController.m"
+         timestampString = "385112267.629752"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+         landmarkName = "-setNavBarTitle::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "myjam/Shop/CoreViewController.m"
+         timestampString = "385112165.361545"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "myjam/Shop/CoreViewController.m"
+         timestampString = "385112267.629752"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "-initWithNibName:bundle:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

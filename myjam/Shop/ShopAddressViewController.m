@@ -18,6 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+          self.navigationItem.title = @"JAM-BU Shop";
         // Custom initialization
     }
     return self;

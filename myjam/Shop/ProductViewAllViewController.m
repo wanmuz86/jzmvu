@@ -7,7 +7,7 @@
 //
 
 #import "ProductViewAllViewController.h"
-#define kTableCellHeight 150
+#define kTableCellHeight 170
 @interface ProductViewAllViewController ()
 
 @end
@@ -53,6 +53,7 @@
     
     self.tableView.backgroundView = tempImageView;
     [tempImageView release];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 70, 0)];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
